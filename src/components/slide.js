@@ -6,6 +6,7 @@ import { getStyles } from '../utils/base';
 import Radium from 'radium';
 import { addFragment } from '../actions';
 import { Transitionable, renderTransition } from './transitionable';
+import Dragula from 'react-dragula';
 
 @Transitionable
 @Radium
@@ -19,6 +20,13 @@ class Slide extends React.PureComponent {
 
   getChildContext() {
     return { slideHash: this.props.hash };
+  }
+
+  dragulaDecorator = (componentBackingInstance) => {
+    if (componentBackingInstance) {
+      let options = { };
+      Dragula([componentBackingInstance], options);
+    }
   }
 
   componentDidMount() {
@@ -154,6 +162,7 @@ class Slide extends React.PureComponent {
           <div
             ref={c => {
               this.contentRef = c;
+              this.dragulaDecorator(c);
             }}
             className={`${contentClass} spectacle-content`}
             style={[
