@@ -8,6 +8,9 @@ import { addFragment } from '../actions';
 import { Transitionable, renderTransition } from './transitionable';
 import Dragula from 'react-dragula';
 
+const SHOW = 'show';
+const EDIT = 'edit';
+
 @Transitionable
 @Radium
 class Slide extends React.PureComponent {
@@ -143,6 +146,8 @@ class Slide extends React.PureComponent {
     const contentClass = isUndefined(this.props.className)
       ? ''
       : this.props.className;
+
+    const edit = this.context.store.getState().config.mode === EDIT;
     return (
       <div
         className="spectacle-slide"
@@ -162,9 +167,9 @@ class Slide extends React.PureComponent {
           <div
             ref={c => {
               this.contentRef = c;
-              this.dragulaDecorator(c);
+              edit && this.dragulaDecorator(c);
             }}
-            className={`${contentClass} spectacle-content`}
+            className={`${contentClass} spectacle-content ${edit && 'spectacle-edit'}`}
             style={[
               styles.content,
               this.context.styles.components.content,

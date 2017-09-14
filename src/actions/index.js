@@ -6,3 +6,5 @@ export const updateFragment = createAction('UPDATE_FRAGMENT');
 export const updateRoute = createAction('UPDATE_ROUTE');
 
 export const setGlobalStyle = createAction('SET_GLOBAL_STYLE');
+
+export const setMode = createAction('SET_MODE');

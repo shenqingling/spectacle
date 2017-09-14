@@ -1,6 +1,6 @@
 {
-  "name": "spectacle",
-  "version": "2.2.2",
+  "name": "spectacle-dragula",
+  "version": "2.2.3",
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
   "scripts": {

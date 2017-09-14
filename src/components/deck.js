@@ -23,12 +23,13 @@ export default class Deck extends Component {
     theme: PropTypes.object,
     transition: PropTypes.array,
     transitionDuration: PropTypes.number,
+    mode: PropTypes.oneOf(['show', 'edit']),
   };
 
   render() {
     return (
       <Provider store={store}>
-        <Controller theme={this.props.theme} store={store} history={this.props.history}>
+        <Controller theme={this.props.theme} store={store} history={this.props.history} mode={this.props.mode}>
           <Manager {...this.props}>
             {this.props.children}
           </Manager>

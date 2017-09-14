@@ -3,6 +3,57 @@
           transform-origin: center center;
 }
 
+.spectacle-edit > div, 
+.spectacle-edit > a, 
+.spectacle-edit > p, 
+.spectacle-edit > img, 
+.spectacle-edit > blockquote, 
+.spectacle-edit > pre, 
+.spectacle-edit > table, 
+.spectacle-edit > ul,
+.spectacle-edit > h1,
+.spectacle-edit > h2,
+.spectacle-edit > h3,
+.spectacle-edit > h4,
+.spectacle-edit > h5,
+.spectacle-edit > h6{
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.spectacle-edit > div:hover, 
+.spectacle-edit > a:hover, 
+.spectacle-edit > p:hover, 
+.spectacle-edit > img:hover, 
+.spectacle-edit > blockquote:hover, 
+.spectacle-edit > pre:hover, 
+.spectacle-edit > table:hover, 
+.spectacle-edit > ul:hover,
+.spectacle-edit > h1:hover,
+.spectacle-edit > h2:hover,
+.spectacle-edit > h3:hover,
+.spectacle-edit > h4:hover,
+.spectacle-edit > h5:hover,
+.spectacle-edit > h6:hover,
+.spectacle-edit > div.gu-transit, 
+.spectacle-edit > a.gu-transit, 
+.spectacle-edit > p.gu-transit, 
+.spectacle-edit > img.gu-transit, 
+.spectacle-edit > blockquote.gu-transit, 
+.spectacle-edit > pre.gu-transit, 
+.spectacle-edit > table.gu-transit, 
+.spectacle-edit > ul.gu-transit,
+.spectacle-edit > h1.gu-transit,
+.spectacle-edit > h2.gu-transit,
+.spectacle-edit > h3.gu-transit,
+.spectacle-edit > h4.gu-transit,
+.spectacle-edit > h5.gu-transit,
+.spectacle-edit > h6.gu-transit{
+  border: 1px dashed #ddd;
+}
+
 /* Firefox */
 
 _:-moz-tree-row(hover), .spectacle-deck {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import createHistory from 'history/createHashHistory';
 import PropTypes from 'prop-types';
-import { updateRoute } from '../actions';
+import { updateRoute, setMode } from '../actions';
 import { countSlides } from './slides';
 
 import theme from '../themes/default';
@@ -37,6 +37,9 @@ export default class Controller extends Component {
         slideCount,
       })
     );
+
+    const mode = this.props.mode;
+    this.props.store.dispatch(setMode({mode}));
   }
 
   shouldComponentUpdate(nextProps, nextState) {
